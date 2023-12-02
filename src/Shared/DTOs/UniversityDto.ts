@@ -1,8 +1,15 @@
 import Joi from "joi";
 
-export type University = {};
+export type UniversityDto = {
+    country: string;
+    domains: string[];
+    alpha_two_code: string;
+    'state-province': string | null;
+    web_pages: string[];
+    name: string;
+};
 
-export const University = Joi.object({
+export const UniversityDtoSchema = Joi.object({
     country: Joi.string().required(),
     domains: Joi.array().items(Joi.string()),
     alpha_two_code: Joi.string().required(),

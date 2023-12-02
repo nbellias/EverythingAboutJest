@@ -1,11 +1,9 @@
-import Joi from 'joi';
-import { University } from './DTOs/University';
-import fetchUniversities from './Universities';
+import fetchUniversities from "./Universities";
 
-jest.mock('./DTOs/University');
-jest.mock('./DAL/Universities');
+jest.mock('../Shared/DTOs/UniversityDto');
+jest.mock('../Shared/DAL/UniversitiesDal');
 
-describe('fetchUniversities', () => {
+describe('fetchUniversities function', () => {
   it('should expose a function', () => {
 		expect(fetchUniversities).toBeDefined();
 	});
