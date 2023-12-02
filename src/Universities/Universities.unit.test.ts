@@ -20,7 +20,7 @@ describe('universities', () => {
 
   describe('fetchUniversities from mocked Universities', async () => {
     jest.mock('../Shared/DTOs/UniversityDto');
-  jest.mock('../Shared/DAL/UniversitiesDal');
+    jest.mock('../Shared/DAL/UniversitiesDal');
     jest.mock('./Universities');
     test('fetchUniversities should return something', async () => {
       const retValue = await fetchUniversities('Greece');
