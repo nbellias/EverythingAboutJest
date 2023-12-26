@@ -1,7 +1,6 @@
 import fetchUniversities from "./Universities";
 
-
-describe('universities', () => {
+describe('Universities', () => {
   describe('fetchUniversities function', () => {
     it('should expose a function', () => {
       expect(fetchUniversities).toBeDefined();
@@ -18,7 +17,8 @@ describe('universities', () => {
     });
   });
 
-  describe('fetchUniversities from mocked Universities', async () => {
+  describe('fetchUniversities from mocked Universities', () => {
+    jest.mock('axios');
     jest.mock('../Shared/DTOs/UniversityDto');
     jest.mock('../Shared/DAL/UniversitiesDal');
     jest.mock('./Universities');

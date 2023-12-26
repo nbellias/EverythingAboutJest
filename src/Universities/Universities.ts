@@ -5,8 +5,7 @@ export default async function fetchUniversities(country: string): Promise<Univer
     return await getUniversities(country);
 };
 
-
 fetchUniversities('Greece')
 .then((res) => {
-    console.log(res);
+    // console.log(res);
 });

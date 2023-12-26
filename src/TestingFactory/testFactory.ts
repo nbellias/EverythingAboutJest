@@ -4,10 +4,17 @@ import AService from '../Shared/Services/AService';
 export function createTestFactory() {
   const mockUniversitiesRepository = {
     getUniversities: jest.fn(),
-    // ... other methods
   };
 
-  const service = new AService(mockUniversitiesRepository);
+  const mockCountriesRepository = {
+    getCountryInfo: jest.fn(),
+  }
 
-  return { service, mockUniversitiesRepository };
+  const mockDateNow = {
+    dateNow: jest.fn(),
+  }
+
+  const service = new AService(mockUniversitiesRepository, mockCountriesRepository);
+
+  return { service, mockUniversitiesRepository, mockCountriesRepository };
 }
